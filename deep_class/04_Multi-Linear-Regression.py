@@ -1,5 +1,7 @@
 #-*- coding: utf-8 -*-
-import tensorflow as tf
+#import tensorflow as tf
+import tensorflow.compat.v1 as tf
+tf.disable_v2_behavior()
 
 # x1, x2, y의 데이터 값
 
@@ -33,4 +35,3 @@ with tf.Session() as sess:
         sess.run(gradient_decent)
         if step % 100 == 0:
             print("Epoch: %.f, RMSE = %.04f, 기울기 a1 = %.4f, 기울기 a2 = %.4f, y절편 b = %.4f" % (step,sess.run(rmse),sess.run(a1),sess.run(a2),sess.run(b)))
-

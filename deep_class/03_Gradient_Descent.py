@@ -1,4 +1,6 @@
-import tensorflow as tf
+#import tensorflow as tf
+import tensorflow.compat.v1 as tf
+tf.disable_v2_behavior()
 
 # x, y의 데이터 값
 data = [[2, 81], [4, 93], [6, 91], [8, 97]]
